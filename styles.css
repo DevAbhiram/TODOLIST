@@ -1,104 +1,109 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
 }
-html, body {
+
+html,
+body {
   height: 100%;
 }
+
 body {
   background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .container {
   min-height: 100%;
   padding: 10px;
 }
+
 .todo {
-    width: 100%;
-    max-width: 580px;
-    background-color: #ffffff;
-    margin: 100px auto 20px;
-    padding: 40px 30px 70px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(41, 128, 185, 0.2);
+  width: 100%;
+  max-width: 580px;
+  background-color: #ffffff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(41, 128, 185, 0.2);
 }
 
 .todo h2 {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .todo h2 img {
-    width: 30px;
-    margin-left: 10px;
+  width: 30px;
+  margin-left: 10px;
 }
 
 .bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #edeef0;
-    border-radius: 30px;
-    padding-left: 20px;
-    margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
 }
 
 input {
-    flex: 1;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background: #ecf0f1;
-    padding: 10px;
+  flex: 1;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background: #ecf0f1;
+  padding: 10px;
 }
 
 input::placeholder {
-    color: #95a5a6;
+  color: #95a5a6;
 }
 
 button {
-    border: none;
-    outline: none;
-    padding: 16px 50px;
-    background: #ff6b6b;
-    color: #ffffff;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 40px;
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #ff6b6b;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
 }
 
 button:hover {
-    background-color: #ff4d4d;
+  background-color: #ff4d4d;
 }
 
 ul li {
-    list-style: none;
-    font-size: 18px;
-    padding: 12px 8px 12px 50px;
-    user-select: none;
-    cursor: pointer;
-    position: relative;
+  list-style: none;
+  font-size: 18px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
 }
 
 ul li::before {
-    content: '';
-    position: absolute;
-    height: 18px;
-    width: 18px;
-    border-radius: 50%;
-    border: 2px solid black;
-    background-color: #ffffff;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    transition: all 0.3s ease;
+  content: '';
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: #ffffff;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
 }
 
 ul li.checked {
@@ -117,6 +122,7 @@ ul li.checked::before {
   align-items: center;
   justify-content: center;
 }
+
 .delete-btn {
   position: absolute;
   right: 15px;
@@ -130,73 +136,67 @@ ul li.checked::before {
 .delete-btn:hover {
   color: #c0392b;
 }
+
 @media (max-width: 450px) {
   .todo {
-    width: 100%;
-    margin: 50px auto 10px;
-    padding: 30px 20px 50px;
-    border-radius: 8px;
+    width: 90%;
+    margin: 60px auto;
+    padding: 20px;
+    border-radius: 20px;
     animation: slideUp 0.5s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   }
 
   .bar {
+    display: flex;
     flex-direction: column;
-    align-items: stretch;
-    padding-left: 10px;
-    gap: 10px;
+    gap: 15px;
+    background: transparent;
+    padding-left: 0;
+    align-items: center;
   }
 
   input {
     width: 100%;
-    padding: 12px;
+    padding: 12px 15px;
     font-size: 16px;
+    border-radius: 12px;
+    border: 2px solid #2980b9;
+    background: #f9f9f9;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.05);
+  }
+
+  input::placeholder {
+    color: #7f8c8d;
   }
 
   button {
-    width: 100%;
-    padding: 14px;
-    font-size: 16px;
+    width: 60%;
+    padding: 12px;
+    font-size: 18px;
+    background: #2980b9;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(41, 128, 185, 0.2);
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #2573a6;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 25px;
   }
 
   ul li {
     font-size: 16px;
-    padding: 12px 8px 12px 40px;
+    padding: 10px 8px 10px 40px;
   }
 
   .delete-btn {
     font-size: 18px;
     right: 10px;
   }
-
-  h2 {
-    font-size: 22px;
-  }
-}
-
-/* 🔄 Keyframes for animation */
-@keyframes slideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInTask {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* 👇 Optional: Animate task appearance */
-ul li {
-  animation: fadeInTask 0.3s ease;
 }
