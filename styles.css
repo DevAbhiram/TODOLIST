@@ -130,3 +130,73 @@ ul li.checked::before {
 .delete-btn:hover {
   color: #c0392b;
 }
+@media (max-width: 450px) {
+  .todo {
+    width: 100%;
+    margin: 50px auto 10px;
+    padding: 30px 20px 50px;
+    border-radius: 8px;
+    animation: slideUp 0.5s ease-in-out;
+  }
+
+  .bar {
+    flex-direction: column;
+    align-items: stretch;
+    padding-left: 10px;
+    gap: 10px;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  ul li {
+    font-size: 16px;
+    padding: 12px 8px 12px 40px;
+  }
+
+  .delete-btn {
+    font-size: 18px;
+    right: 10px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}
+
+/* 🔄 Keyframes for animation */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInTask {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 👇 Optional: Animate task appearance */
+ul li {
+  animation: fadeInTask 0.3s ease;
+}
