@@ -17,7 +17,7 @@ A simple and elegant **To-Do List** web application built using **HTML, CSS, and
 
 ## 🌐 Demo
 
-> 🔗 [Live Demo](https://devabhiram.github.io/TO_DO/)
+> 🔗 [Live Demo](https://devabhiram.github.io/TODOLIST/)
 ## 📸 Screenshot
 
 ![App Screenshot](./assests/screenshot.png)
