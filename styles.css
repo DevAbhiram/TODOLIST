@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  min-height: 100%;
+  padding: 10px;
+}
+.todo {
+    width: 100%;
+    max-width: 580px;
+    background-color: #ffffff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(41, 128, 185, 0.2);
+}
+
+.todo h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background: #ecf0f1;
+    padding: 10px;
+}
+
+input::placeholder {
+    color: #95a5a6;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff6b6b;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+button:hover {
+    background-color: #ff4d4d;
+}
+
+ul li {
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: #ffffff;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+ul li.checked {
+  color: #888;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  content: 'check_circle';
+  font-family: 'Material Symbols Outlined';
+  font-size: 20px;
+  color: #27ae60;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.delete-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e74c3c;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: #c0392b;
+}
